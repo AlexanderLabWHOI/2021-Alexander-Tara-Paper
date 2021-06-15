@@ -63,7 +63,7 @@ The model we developed relies solely upon references that were derived from expr
 \begin{figure}
     \centering
     \includegraphics[width=0.95\columnwidth]{si-figures/Tara_stationMap-01.png}
-    \caption{Sample map and distribution of sequence data sets across regions. Stations from \textit{Tara} Oceans were categorized into general regions which are highlighted by color. The depth (surface (SRF), deep chlorophyll max (DCM), mixed surface sample (MIX), mesopelagic (MES), and filtered seawater (FSW) and size fraction are shown as bar plots for each ocean region. }
+    \caption{Sample map and distribution of sequence data sets across regions. Stations from \textit{Tara} Oceans were categorized into general regions which are highlighted by color. The depth (surface (SRF), deep chlorophyll max (DCM), mixed surface sample (MIX), mesopelagic (MES), and filtered seawater (FSW)) and size fraction are shown as bar plots for each ocean region. }
     \label{fig:tara-map}
 \end{figure}
 \end{landscape}
@@ -71,7 +71,7 @@ The model we developed relies solely upon references that were derived from expr
 \begin{figure}
     \centering
     \includegraphics[width=0.95\columnwidth]{si-figures/modified-sourmash-region-size_depth-01.png}
-    \caption{Sourmash comparison of all metagenomic samples from \textit{Tara} Oceans large size fraction dataset. A minhash comparison was calculated using sourmash (k=31, scale=10,000) of the 824 metagenomic samples corresponding to the large size fraction metagenomic data from \textit{Tara} Oceans (PRJEB4352). The relative sequence content similarity is shown as Jaccard similarity. Hierarchical clustering of samples based on sequence content is shown and sample identity (sample depth, size fraction, and ocean region) is highlighted by colored blocks.}
+    \caption{Sourmash comparison of all metagenomic samples from \textit{Tara} Oceans large size fraction dataset. A minhash comparison was calculated using sourmash (k=31, scale=10,000) of the 824 metagenomic samples corresponding to the large size fraction metagenomic data from \textit{Tara} Oceans (PRJEB4352) \citep{Titus_Brown_2016}. The relative sequence content similarity is shown as Jaccard similarity. Hierarchical clustering of samples based on sequence content is shown and sample identity (sample depth, size fraction, and ocean region) is highlighted by colored blocks.}
     \label{fig:sourmash}
 \end{figure}
 
@@ -130,8 +130,8 @@ The model we developed relies solely upon references that were derived from expr
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\columnwidth]{si-figures/HQ_BUSCO-EukCC-comp.png}
-    \caption{A comparison of two metrics of eukaryotic completeness. BUSCO completeness as defined based on the presence and absence of genes within the eukaryota\_odb10 dataset was compared against the estimated EukCC completeness based on estimated lineages of given MAGs. Generally, it was observed that EukCC performed particualrly well for certain groups (e.g. chlorophytes and fungi) and less well for others (e.g. metazoa).}
+    \includegraphics[width=0.6\columnwidth]{si-figures/HQ_BUSCO-EukCC-comp.png}
+    \caption{A comparison of two metrics of eukaryotic completeness. BUSCO completeness as defined based on the presence and absence of genes within the eukaryota\_odb10 dataset was compared against the estimated EukCC completeness based on estimated lineages of given MAGs. Generally, it was observed that EukCC performed particularly well for certain groups (e.g. chlorophytes and fungi) and less well for others (e.g. metazoa).}
     \label{fig:eukcc}
 \end{figure}
 
@@ -148,7 +148,7 @@ The model we developed relies solely upon references that were derived from expr
 \begin{figure}
     \centering
     \includegraphics[width=0.9\columnwidth]{si-figures/modified-individual-mag-group-correlation-01.png}
-    \caption{ }
+    \caption{A Spearman correlation between the metagenomic abundance of each of the 485 high-completion eukayrotic TOPAZ MAGs and environmental parameters from the sampling \citep{taraoceansconsortium2016ecoa}, modeled mesoscale physical features based on \citet{d_Ovidio_2010} (indicated with *) , and averaged remote sensing products (indicated with **).}
     \label{fig:ind-corr}
 \end{figure}
 
@@ -156,38 +156,64 @@ The model we developed relies solely upon references that were derived from expr
 \begin{figure}
     \centering
     \includegraphics[width=0.9\columnwidth]{si-figures/mag-group-correlation-01.png}
-    \caption{ }
+    \caption{ A Spearman correlation between the summed metagenomic abundance of each taxonomic group and environmental parameters from the sampling \citep{taraoceansconsortium2016ecoa}, modeled mesoscale physical features based on \citet{d_Ovidio_2010} (indicated with *) , and averaged remote sensing products (indicated with **). Significant Spearman correlations, those with a Bonferroni adjusted $p<0.01$, are indicated with a dot on the heatmap.}
     \label{fig:env-corr}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.95\columnwidth]{si-figures/SI-SAR-Dictyocho-MAG-KEGG-intersection.pdf}
-    \caption{Intersection of shared or unique KEGG IDs across 24 SAR and Dictyochophyceae MAGs}
+    \includegraphics[width=0.95\columnwidth]{si-figures/SI-SAR-Dictyocho-MAG-KEGG-intersection.png}
+    \caption{Intersection of shared or unique KEGG IDs across 24 SAR and \textit{Dictyochophyceae} TOPAZ MAGs. Subset of MAGs (named on the left) indicated by dot grid (top; ggupset) and the total number of shared KEGG IDs (bottom) as barplots. The largest 30 sets of shared or unique KEGG ID intersections is shown. Combination of MAG intersections show by colors denote the KEGG module, where NA (white) indicates that the KEGG ID did not belong to a KEGG module. }
         \label{fig:dictyocho-SAR-intersect}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.95\columnwidth]{si-figures/SI-SAR-Dictyocho-MAG-MAG-relabun-bysample.pdf}
-    \caption{Relative abundance of dictyochophyceae and selected SAR MAGs by sample.}
+    \includegraphics[width=0.95\columnwidth]{si-figures/SI-SAR-Dictyocho-MAG-MAG-relabun-bysample.png}
+    \caption{Relative counts per million (CPM) of 25 selected SAR and \textit{Dictyochophyceae} TOPAZ MAGs (x-axis) by sample (y-axis and color bar). CPM of MAGs were summed by sample type, size fraction, depth, and ocean region, and Z-score transformed (heatmap signature) for visualization with pheatmap (R; v1.0.12). MAGs and samples are clustered based on average distance.
+    }
     \label{fig:dictyocho-SAR-heatmap}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.9\columnwidth]{si-figures/SI-stramenopile-MAG-map.pdf}
-    \caption{Map of MAG relative abundance in surface and DCM}
+    \includegraphics[width=0.95\columnwidth]{si-figures/SI-stramenopile-MAG-map.png}
+    \caption{Metagenomic abundance plots for the 24 SAR and  \textit{Dictyochophyceae} TOPAZ MAGs considered. The relative abundance in CPM is shown as a bubble size. Color indicates the depth of the sample. }
     \label{fig:dictyocho-SAR-map}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.8\columnwidth]{si-figures/SI-SAR-Dictyocho-PCA-byMAG.pdf}
-    \caption{PCA by MAG..}
+    \includegraphics[width=0.9\columnwidth]{si-figures/SI-SAR-Dictyocho-PCA-byMAG.png}
+    \caption{Principle component analysis derived from metatranscriptome reads, from the surface and smallest size fraction, mapped to shared orthologs (Shared in all MAGs in (Figure 5 b)) among selected 24 TOPAZ MAGs. Symbol size designates Heterotrophy Index, while symbol color denotes each TOPAZ MAG.}
     \label{fig:dictyocho-SAR-PCA-mag}
 \end{figure}
 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\columnwidth]{si-figures/SI-horizontal-collapsed-clades-05062021.png}
+    \caption{Concatenated BUSCO phylogeny of the 24 selected TOPAZ MAGs with a selection of other stramenopile MAGs and SMAGs from \citet{Delmont_2020}. The phylogeny is pictured with iTOL. Collapsed clades include a mixture of TOPAZ and Delmont-generated MAGs that are listed.}
+    \label{fig:dictyocho-SAR-tree-itol}
+\end{figure}
+
+\begin{landscape}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\columnwidth]{si-figures/SI-phototrophs-lolli-05062021.png}
+    \caption{Lollipop plot showing the relative CPM of mapped transcripts associated with more phototrophic (left) or heterotrophic (right) traits for 4 \textit{Dictyochophyceae} MAGs (left to right). Relative abundance is shown by MAG for each sample (y-axis and color bar). Shown TOPAZ MAGs were classified as primarily phototrophic (low H-index, reported next to each TOPAZ MAG name), but relative abundance of mapped transcripts varies by sample type.}
+    \label{fig:dictyocho-SAR-pho-lolli}
+\end{figure}
+\end{landscape}
+
+\begin{landscape}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\columnwidth]{si-figures/SI-heterotrophs-lolli-05062021.png}
+    \caption{Lollipop plot showing the relative CPM of mapped transcripts associated with more phototrophic (left) or heterotrophic (right) traits for 4 SAR TOPAZ MAGs (left to right). Relative abundance is shown by MAG for each sample (y-axis and color bar). TOPAZ MAGs selected are a subset from the SAR clade closely related to stramenopiles and were predicted to be heterotrophic (high H-index; reported next to each TOPAZ MAG name).
+    }
+    \label{fig:dictyocho-SAR-het-lolli}
+\end{figure}
+\end{landscape}
 
 \begin{figure}
     \centering
@@ -231,16 +257,25 @@ The model we developed relies solely upon references that were derived from expr
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.95\columnwidth]{si-figures/heterotrophyindex_group.png}
-    \caption{Heterotrophy Index scores as a function of ``BUSCO'' completeness, faceted by taxonomy phylum. The strongest association of Heterotrophy Index with completeness was found amount Arthropoda, for which it appears that the magnitude of the Heterotrophy Index is tightly coupled to the level of completeness of the MAG. By contrast, Cryptophyta (which are known to be mixotrophic \citep{jones2000mixotrophy}) showed a much weaker coupling of completeness with the magnitude of the Heterotrophy Index, and all values of the Index were closer to zero.}
+    \includegraphics[width=0.95\columnwidth]{si-figures/heterotrophyindex_group_new.png}
+    \caption{Heterotrophy Index scores as a function of BUSCO completeness, faceted by taxonomy phylum. The strongest association of Heterotrophy Index with completeness was found within Metazoa, for which it appears that the magnitude of the Heterotrophy Index is tightly coupled to the level of completeness of the MAG. By contrast, Cryptophyta (which are known to be mixotrophic \citep{jones2000mixotrophy}) showed a much weaker coupling of completeness with the magnitude of the Heterotrophy Index, and all values of the Index were closer to zero.}
     \label{fig:het-ind}
 \end{figure}
+
+
+\begin{figure}[h!]    
+    \centering
+    \includegraphics[width = 0.75\columnwidth]{si-figures/Figure2-TOPAZ_prok_features_vsGORG_mod.png}
+    \caption{Comparison of the genomic characteristics between the TOPAZ MAGs and GORG SAGs belonging to the phyla, Bacteroidota, Cyanobacteria and Proteobcteria. The distributions of GC \% content, estimated genome size (Mbp), number of CAZY hits per genome, number of CAZY hits per Mbp per genome, number of peptidase genes per genome and number of peptidase genes per Mbp per genome are presented as box plots. }
+    \label{fig:fig6-prokfunc}
+\end{figure}
+
 
 \begin{landscape}
     \begin{figure}
         \centering
         \includegraphics[width=0.95\columnwidth]{si-figures/network_supporting.png}
-        \caption{Supporting figures for the network analysis section. A and B: FastANI clustering does not typically group together eukaryotic MAGs of different overall taxonomic classification (A) or taxonomic order (B). C: Justification for ANI cutoff of 95\% (and correlation coefficient 0.504) for considering eukaryotic MAGs to be sufficiently similar to be clustered. The majority of MAGs with pairwise ANI scores of $\geq$95 have correlation coefficiently of $\geq$0.8. D: Taxonomic composition of the 7 identified communities from the main text.}
+        \caption{Supporting figures for the network analysis section. A and B: FastANI clustering does not typically group together eukaryotic MAGs of different overall taxonomic classification (A) or taxonomic order (B). C: Justification for ANI cutoff of 95\% (and correlation coefficient 0.504) for considering eukaryotic MAGs to be sufficiently similar to be clustered. The majority of MAGs with pairwise ANI scores of $\geq$95 have correlation coefficients of $\geq$0.8. D: Taxonomic composition of the 7 identified communities from the main text.}
         \label{fig:network-support}
     \end{figure}
 \end{landscape}
@@ -253,21 +288,23 @@ The model we developed relies solely upon references that were derived from expr
         \label{fig:network-bygroup}
     \end{figure}
 \end{landscape}
-% Why are all the SI figures below after the references?
 
-%Notes on tree that will eventually be here
-%https://itol.embl.de/tree/12812810207359791620499625#
-% When we take a look at a subset of TOPAZ MAGs, mix in ok with both MAGs and SAGs from previous \textit{Tara} ocean efforts.
-% We cannot necessarily annotate beyond SAR, but with such a large group that likely dominantes most marine microbiomes, we can get much further than previous analyses with respect to what members within SAR exist. 
-% they do not seem to be in culture, as they were not annotated beyond SAR, but we can make important ecological considerations about them. 
-% Tree to do/chat with HA
-%% singletons? random MAGs that are dinophyceae? NA? ciliates? other things that are in the middle of a bunch of diatoms. Remove?
-%% Choanoflagelaltes in 2 places.. why would this happen? 
-% Upon collapsing... show (1) # of diatoms vs other nad (2) # of Alexander versus Delmont
+\begin{figure}
+    \centering
+    \includegraphics[width=0.95\columnwidth]{si-figures/Network_community_maps-01.png}
+    \caption{Distribution of identified communities across \textit{Tara} Oceans Samples. The summed metagenomic abundance (CPM) of each of the seven identified communities from the network analysis (Figure 6) is shown for each size fraction. The size of the bubble indicates the relative abundance of the community in a given sample. }
+    \label{fig:network-map}
+\end{figure}
 
-% TO DO:
-% MAST are recovered, but they are not these ones.
-% we have choanos ?
+
+\begin{figure}[h!]    
+    \centering
+    \includegraphics[width = 0.75\columnwidth]{si-figures/Heatmap_mod.png}
+    \caption{Genomic characteristics of the Community 1 MAGs. MAG names are color-coded based on the taxonomic affiliations estimated by GTDB-tk. The presence of the high oxygen affinity cytochromes db ubiquinol oxidase and cbb3, as well as the reductases (involved in anaerobic processes) DMSO family type II, nitric oxide and nitrite are noted with grey in the left panel of the heat map. The presence of genes involved in CAZy pathways for the hydrolysis/degradation of amorphous cellulose, arabinan, arabinose cleavage, beta-galactan, beta-mannan, chitin, mixed-linkage glucans, pectin, rhamnose cleavage, starch, sulf-polysachharides, xylans, xyloglucan are noted with grey in the right panel of the heat map. The estimated size of the genomes is shown as a bar plot.}
+    \label{fig:community1-bact}
+\end{figure}
+
+\clearpage
 
 
 \bibliographystyle{abbrvnat}
